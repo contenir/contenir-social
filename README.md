@@ -109,7 +109,7 @@ longer documents it.
 
 | Key | Holds | When missing |
 |---|---|---|
-| `extensions.social.share_networks` | the buttons, in order: a list of names, the CMS's repeating rows, or names separated by commas | Facebook, X, LinkedIn, Email, Copy link, Share… |
+| `extensions.social.share_networks` | the buttons, in order: a list of names, the CMS's repeating rows, or names separated by commas | Facebook, X, LinkedIn, Email, Copy link, Share…, also when none are chosen |
 | `extensions.social.share_labels` | show each button's name beside its icon | on |
 | `extensions.social.share_utm` | add `utm_source` (the button's name), `utm_medium` (`social`, or `email`) and `utm_campaign=share` to the shared address | off |
 

@@ -49,20 +49,18 @@ final readonly class ShareConfig
      * buttons may be stored as a list of names, as the CMS's repeating rows
      * ([['fields' => ['network' => 'x']], …]) or as names separated by
      * commas. Names that aren't share targets are left out, and a repeat
-     * keeps the place it first had.
-     * Until a site chooses, it has DEFAULT_TARGETS.
+     * keeps the place it first had. A site that has chosen none has
+     * DEFAULT_TARGETS: to show no buttons, a site leaves share() out.
      *
      * @param array<array-key, mixed> $settings
-     *
-     * @mago-expect analysis:mixed-assignment Settings are untyped; the stored buttons are checked as they are read.
      */
     public static function fromSettings(array $settings): self
     {
         $values  = new SettingsArray($settings);
-        $targets = $values->find(SettingKeys::SHARE_NETWORKS);
+        $targets = self::targets($values->find(SettingKeys::SHARE_NETWORKS));
 
         return new self(
-            null === $targets ? self::DEFAULT_TARGETS : self::targets($targets),
+            [] === $targets ? self::DEFAULT_TARGETS : $targets,
             $values->flag(SettingKeys::SHARE_LABELS, default: true),
             $values->flag(SettingKeys::SHARE_UTM, default: false),
         );

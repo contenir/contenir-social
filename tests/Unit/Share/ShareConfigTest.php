@@ -15,6 +15,20 @@ use PHPUnit\Framework\TestCase;
 final class ShareConfigTest extends TestCase
 {
     /**
+     * @return array<string, array{mixed}>
+     */
+    public static function noneChosenProvider(): array
+    {
+        return [
+            'missing'        => [null],
+            'an empty list'  => [[]],
+            'empty text'     => [''],
+            'only unknowns'  => [['myspace']],
+            'something else' => [12],
+        ];
+    }
+
+    /**
      * @return array<string, array{mixed, list<ShareTarget>}>
      */
     public static function storedTargetsProvider(): array
@@ -39,8 +53,6 @@ final class ShareConfigTest extends TestCase
             ],
             'unknown names'          => [['x', 'myspace', '', null, 3, ['fields' => 'x']], [ShareTarget::X]],
             'repeats keep the first' => [['email', 'x', 'email'], [ShareTarget::Email, ShareTarget::X]],
-            'none chosen'            => [[], []],
-            'something else'         => [12, []],
         ];
     }
 
@@ -63,6 +75,16 @@ final class ShareConfigTest extends TestCase
                 false,
             ],
             [$config->targets, $config->labels, $config->utm],
+        );
+    }
+
+    #[Test]
+    #[DataProvider('noneChosenProvider')]
+    public function offersTheDefaultButtonsWhenASiteHasChosenNone(mixed $stored): void
+    {
+        static::assertSame(
+            ShareConfig::DEFAULT_TARGETS,
+            ShareConfig::fromSettings(['extensions' => ['social' => ['share_networks' => $stored]]])->targets,
         );
     }
 

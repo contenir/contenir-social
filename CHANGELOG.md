@@ -20,7 +20,8 @@ adheres to [Semantic Versioning](https://semver.org/).
   (only with an image) and Telegram, plus "Copy link" and "Share…" buttons. They are plain links built from the page's
   metadata (`Share\Page`), with optional UTM tags; no third-party scripts, counts or cookies.
 - `Share\ShareConfig::fromSettings()`, which reads which buttons a site shows and in what order, whether names show
-  beside icons and whether addresses are tagged (`extensions.social.*`).
+  beside icons and whether addresses are tagged (`extensions.social.*`). A site that has chosen no buttons has the
+  defaults: Facebook, X, LinkedIn, Email, Copy link and Share….
 - HTML for both (`Html\ProfileLinks`, `Html\ShareButtons`): escaped, with `social__*` BEM classes a site can rename,
   `rel="me"` on profiles, accessible names that say when a link opens a new tab, and inline SVG icons
   (`Html\IconSvg`) from Simple Icons and Tabler Icons (see ICONS.md).
