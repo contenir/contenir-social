@@ -1,5 +1,5 @@
 /*
- * contenir/social: "Copy link" and "Share…" for share buttons.
+ * contenir/contenir-social: "Copy link" and "Share…" for share buttons.
  *
  * Both buttons are written hidden. This shows "Copy link" where the browser
  * can copy, and "Share…" only where it has a share sheet (navigator.share),
