@@ -35,6 +35,11 @@ final class ProfileRulesTest extends TestCase
             'threads'           => [Network::Threads, '/@houses', 'houses'],
             'bluesky lowercase' => [Network::Bluesky, '/profile/Houses.BSKY.social', 'houses.bsky.social'],
             'mastodon'          => [Network::Mastodon, '/@houses', 'houses'],
+            'vimeo'             => [Network::Vimeo, '/houses/', 'houses'],
+            'vimeo w-word'      => [Network::Vimeo, '/watchmaker', 'watchmaker'],
+            'vimeo channel'     => [Network::Vimeo, '/channels/houses', 'channels/houses'],
+            'behance'           => [Network::Behance, '/houses/', 'houses'],
+            'behance g-word'    => [Network::Behance, '/gallerist', 'gallerist'],
         ];
     }
 
@@ -91,6 +96,17 @@ final class ProfileRulesTest extends TestCase
             'mastodon prefixed'       => [Network::Mastodon, '/x/@houses'],
             'mastodon nested'         => [Network::Mastodon, '/@houses/1'],
             'mastodon with a newline' => [Network::Mastodon, "/@houses\n"],
+            'vimeo video'             => [Network::Vimeo, '/123456789'],
+            'vimeo watch'             => [Network::Vimeo, '/watch'],
+            'vimeo channels alone'    => [Network::Vimeo, '/channels/'],
+            'vimeo prefixed'          => [Network::Vimeo, '/x/houses'],
+            'vimeo nested'            => [Network::Vimeo, '/houses/videos'],
+            'vimeo with a newline'    => [Network::Vimeo, "/houses\n"],
+            'vimeo channel newline'   => [Network::Vimeo, "/channels/houses\n"],
+            'behance gallery'         => [Network::Behance, '/gallery'],
+            'behance prefixed'        => [Network::Behance, '/x/houses'],
+            'behance nested'          => [Network::Behance, '/houses/projects'],
+            'behance with a newline'  => [Network::Behance, "/houses\n"],
         ];
     }
 
@@ -119,6 +135,10 @@ final class ProfileRulesTest extends TestCase
             'bluesky'            => [Network::Bluesky, 'bsky.app'],
             'mastodon'           => [Network::Mastodon, 'mastodon.social'],
             'mastodon subdomain' => [Network::Mastodon, 'social.example-site.org'],
+            'vimeo'              => [Network::Vimeo, 'vimeo.com'],
+            'vimeo www'          => [Network::Vimeo, 'www.vimeo.com'],
+            'behance'            => [Network::Behance, 'behance.net'],
+            'behance www'        => [Network::Behance, 'www.behance.net'],
         ];
     }
 
@@ -155,6 +175,11 @@ final class ProfileRulesTest extends TestCase
             'mastodon numeric end'    => [Network::Mastodon, 'mastodon.social1'],
             'mastodon with a newline' => [Network::Mastodon, "mastodon.social\n"],
             'bluesky with a newline'  => [Network::Bluesky, "bsky.app\n"],
+            'vimeo prefixed'          => [Network::Vimeo, 'notvimeo.com'],
+            'vimeo suffixed'          => [Network::Vimeo, 'vimeo.com.evil.net'],
+            'vimeo player'            => [Network::Vimeo, 'player.vimeo.com'],
+            'behance prefixed'        => [Network::Behance, 'notbehance.net'],
+            'behance suffixed'        => [Network::Behance, 'behance.net.evil.net'],
         ];
     }
 

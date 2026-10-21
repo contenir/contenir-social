@@ -8,14 +8,17 @@ adheres to [Semantic Versioning](https://semver.org/).
 
 ### Added
 
-- A catalogue of ten networks for profiles (`Network`): Facebook, Instagram, LinkedIn, X, YouTube, TikTok, Pinterest,
-  Threads, Bluesky and Mastodon, each with its settings key, an example for editors and its icon.
+- A catalogue of twelve networks for profiles (`Network`): Facebook, Instagram, LinkedIn, X, YouTube, TikTok,
+  Pinterest, Threads, Bluesky, Mastodon, Vimeo and Behance, each with its settings key, an example for editors and its
+  icon. A Vimeo profile is a user or a channel; video and project addresses are refused. Neither Vimeo nor Behance has
+  a share address, so neither is a share button.
 - `ProfileUrl`, which reads a profile address in any form its network serves it in, or an account given on its own
   (`@yourname`, `yourname.bsky.social`, `@yourname@server`), checks it against the network's hosts and paths, and keeps
   the canonical https address. Problems are worded for editors.
 - `Profiles::fromSettings()`, which reads a site's profiles under the keys the CMS's Social Media Links plugin used
-  (`social.social_*`), so accounts stored as handles read as addresses. `sameAs()` lists them for schema.org, and
-  `twitterSite()` gives the X account for `twitter:site`.
+  (`social.social_*`), as stored: an address in any form, or just the account, reads as the canonical address, so a
+  site's stored values never need rewriting. `sameAs()` lists them for schema.org, and `twitterSite()` gives the X
+  account for `twitter:site`, whichever form is stored.
 - Share links (`Share\ShareLinks`) for Facebook, X, LinkedIn, WhatsApp, Email, Bluesky, Threads, Reddit, Pinterest
   (only with an image) and Telegram, plus "Copy link" and "Share…" buttons. They are plain links built from the page's
   metadata (`Share\Page`), with optional UTM tags; no third-party scripts, counts or cookies.

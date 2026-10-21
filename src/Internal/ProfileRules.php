@@ -75,6 +75,8 @@ final class ProfileRules
             Network::Threads   => '/^(?:www\.)?threads\.(?:com|net)$/D',
             Network::Bluesky   => '/^bsky\.app$/D',
             Network::Mastodon  => '/^(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.)+[a-z]{2,63}$/D',
+            Network::Vimeo     => '/^(?:www\.)?vimeo\.com$/D',
+            Network::Behance   => '/^(?:www\.)?behance\.net$/D',
         };
 
         return 1 === preg_match($pattern, $host);
@@ -97,6 +99,8 @@ final class ProfileRules
             Network::Threads   => 'https://www.threads.com%s/@%s',
             Network::Bluesky   => 'https://bsky.app%s/profile/%s',
             Network::Mastodon  => 'https://%s/@%s',
+            Network::Vimeo     => 'https://vimeo.com%s/%s',
+            Network::Behance   => 'https://www.behance.net%s/%s',
         };
     }
 
@@ -122,6 +126,10 @@ final class ProfileRules
             Network::Bluesky
                 => '~^/profile/(?<handle>did:(?:plc|web):[A-Za-z0-9._:%\-]+|(?:[A-Za-z0-9](?:[A-Za-z0-9\-]{0,61}[A-Za-z0-9])?\.)+[A-Za-z][A-Za-z0-9\-]*)/?$~D',
             Network::Mastodon  => '~^/@(?<handle>[A-Za-z0-9_]{1,30})/?$~D',
+            Network::Vimeo
+                => '~^/(?<handle>channels/[A-Za-z0-9_\-]+|(?!(?:channels|groups|ondemand|showcase|album|categories|watch|search|join|log_in|upload|blog|features|help)/?$)[A-Za-z][A-Za-z0-9_\-]*)/?$~D',
+            Network::Behance
+                => '~^/(?<handle>(?!(?:gallery|galleries|search|joblist|assets|live|hire|blog|about|onboarding)/?$)[A-Za-z0-9_\-]+)/?$~D',
         };
     }
 }
