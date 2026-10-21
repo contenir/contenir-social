@@ -6,6 +6,11 @@ adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased] - 2026-10-21
 
+### Changed
+
+- The package is named `contenir/contenir-social`, after its repository, as every Contenir library is. It was
+  `contenir/social`; the namespace, `Contenir\Social\`, is unchanged.
+
 ### Added
 
 - A catalogue of twelve networks for profiles (`Network`): Facebook, Instagram, LinkedIn, X, YouTube, TikTok,

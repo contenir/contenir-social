@@ -1,4 +1,4 @@
-# contenir/social
+# contenir/contenir-social
 
 [![Continuous Integration](https://github.com/contenir/contenir-social/actions/workflows/continuous-integration.yml/badge.svg)](https://github.com/contenir/contenir-social/actions/workflows/continuous-integration.yml)
 [![codecov](https://codecov.io/gh/contenir/contenir-social/graph/badge.svg)](https://codecov.io/gh/contenir/contenir-social)
@@ -15,7 +15,7 @@ Framework-free social profiles and share links for [Contenir](https://github.com
 
 It has no framework dependency. Sites use it through an adapter, and the CMS through an add-on:
 
-- **Laminas MVC sites:** [contenir/social-laminas-mvc](https://github.com/contenir/contenir-social-laminas-mvc) adds
+- **Laminas MVC sites:** [contenir/contenir-social-laminas-mvc](https://github.com/contenir/contenir-social-laminas-mvc) adds
   `socialProfiles()` and `share()` view helpers.
 - **The CMS:** the [Social add-on](https://github.com/contenir-extension/social) (`contenir-extension/social`) holds
   the settings, and checks each profile, as an address or just the account, as it is saved.
