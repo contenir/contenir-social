@@ -5,7 +5,7 @@ grid. They come from two sets, unchanged apart from leaving out Tabler's empty b
 
 | Icon | Source | Licence |
 |---|---|---|
-| Facebook, Instagram, X, YouTube, TikTok, Pinterest, Threads, Bluesky, Mastodon, WhatsApp, Telegram, Reddit | [Simple Icons](https://simpleicons.org) 16.35.0 | CC0 1.0 |
+| Facebook, Instagram, X, YouTube, TikTok, Pinterest, Threads, Bluesky, Mastodon, Vimeo, Behance, WhatsApp, Telegram, Reddit | [Simple Icons](https://simpleicons.org) 16.35.0 | CC0 1.0 |
 | LinkedIn (`brand-linkedin`), Email (`mail`), Copy link (`link`), Share… (`send`) | [Tabler Icons](https://tabler.io/icons) 3.49.0, filled | MIT, below |
 
 Simple Icons has no LinkedIn mark (LinkedIn's brand rules had it removed), and no generic icons, so those four come
@@ -23,6 +23,7 @@ guidelines permit:
 [LinkedIn](https://brand.linkedin.com),
 [Bluesky](https://bsky.social/about/blog/press-faq),
 [Mastodon](https://joinmastodon.org/branding),
+[Vimeo](https://press.vimeo.com/brand-guidelines),
 [Reddit](https://www.redditinc.com/brand).
 
 ## Tabler Icons licence

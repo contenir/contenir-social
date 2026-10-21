@@ -85,6 +85,20 @@ final class NetworkTest extends TestCase
                 'https://mastodon.social/@yourname',
                 '@yourname@mastodon.social',
             ],
+            'vimeo'     => [
+                Network::Vimeo,
+                'Vimeo',
+                'social.social_vimeo',
+                'https://vimeo.com/yourname',
+                '@yourname',
+            ],
+            'behance'   => [
+                Network::Behance,
+                'Behance',
+                'social.social_behance',
+                'https://www.behance.net/yourname',
+                '@yourname',
+            ],
         ];
     }
 
@@ -120,6 +134,8 @@ final class NetworkTest extends TestCase
                 'threads',
                 'bluesky',
                 'mastodon',
+                'vimeo',
+                'behance',
             ],
             array_map(static fn(Network $network): string => $network->icon()->value, Network::cases()),
         );
@@ -140,6 +156,8 @@ final class NetworkTest extends TestCase
                 'threads',
                 'bluesky',
                 'mastodon',
+                'vimeo',
+                'behance',
             ],
             array_map(static fn(Network $network): string => $network->value, Network::cases()),
         );

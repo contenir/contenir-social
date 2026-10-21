@@ -183,6 +183,36 @@ final class ProfileUrlTest extends TestCase
                 'https://aus.social/@houses_mag',
                 'houses_mag',
             ],
+            'vimeo account'                   => [
+                Network::Vimeo,
+                '@housesmagazine',
+                'https://vimeo.com/housesmagazine',
+                'housesmagazine',
+            ],
+            'vimeo address'                   => [
+                Network::Vimeo,
+                'https://www.vimeo.com/apbsa/',
+                'https://vimeo.com/apbsa',
+                'apbsa',
+            ],
+            'vimeo channel'                   => [
+                Network::Vimeo,
+                'vimeo.com/channels/houses-tv',
+                'https://vimeo.com/channels/houses-tv',
+                'channels/houses-tv',
+            ],
+            'behance account'                 => [
+                Network::Behance,
+                'houses_studio',
+                'https://www.behance.net/houses_studio',
+                'houses_studio',
+            ],
+            'behance address'                 => [
+                Network::Behance,
+                'http://behance.net/houses-studio?tracking=x',
+                'https://www.behance.net/houses-studio',
+                'houses-studio',
+            ],
         ];
     }
 

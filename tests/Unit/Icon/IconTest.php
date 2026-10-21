@@ -34,6 +34,8 @@ final class IconTest extends TestCase
             'threads'   => [Icon::Threads, 1],
             'bluesky'   => [Icon::Bluesky, 1],
             'mastodon'  => [Icon::Mastodon, 1],
+            'vimeo'     => [Icon::Vimeo, 1],
+            'behance'   => [Icon::Behance, 1],
             'whatsapp'  => [Icon::WhatsApp, 1],
             'telegram'  => [Icon::Telegram, 1],
             'reddit'    => [Icon::Reddit, 1],

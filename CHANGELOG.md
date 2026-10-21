@@ -8,6 +8,14 @@ adheres to [Semantic Versioning](https://semver.org/).
 
 ### Added
 
+- Vimeo and Behance profiles (`Network::Vimeo`, `Network::Behance`), under `social.social_vimeo` and
+  `social.social_behance`, with their Simple Icons marks. A Vimeo profile is a user or a channel; video and project
+  addresses are refused. Neither network has a share address, so neither is a share button.
+
+## [0.1.0] - 2026-10-21
+
+### Added
+
 - A catalogue of ten networks for profiles (`Network`): Facebook, Instagram, LinkedIn, X, YouTube, TikTok, Pinterest,
   Threads, Bluesky and Mastodon, each with its settings key, an example for editors and its icon.
 - `ProfileUrl`, which reads a profile address in any form its network serves it in, or an account given on its own

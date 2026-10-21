@@ -24,6 +24,8 @@ enum Network: string
     case Threads   = 'threads';
     case Bluesky   = 'bluesky';
     case Mastodon  = 'mastodon';
+    case Vimeo     = 'vimeo';
+    case Behance   = 'behance';
 
     /**
      * An example of the profile address, for editors.
@@ -41,6 +43,8 @@ enum Network: string
             self::Threads => 'https://www.threads.com/@yourname',
             self::Bluesky => 'https://bsky.app/profile/yourname.bsky.social',
             self::Mastodon => 'https://mastodon.social/@yourname',
+            self::Vimeo => 'https://vimeo.com/yourname',
+            self::Behance => 'https://www.behance.net/yourname',
         };
     }
 
@@ -82,6 +86,8 @@ enum Network: string
             self::Threads => 'Threads',
             self::Bluesky => 'Bluesky',
             self::Mastodon => 'Mastodon',
+            self::Vimeo => 'Vimeo',
+            self::Behance => 'Behance',
         };
     }
 

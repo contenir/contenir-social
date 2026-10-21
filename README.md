@@ -5,7 +5,7 @@
 
 Framework-free social profiles and share links for [Contenir](https://github.com/contenir) sites:
 
-- a catalogue of ten networks, with each one's profile addresses, settings key and icon;
+- a catalogue of twelve networks, with each one's profile addresses, settings key and icon;
 - profile checks: an address in any form the network serves it in, or just the account, becomes the canonical
   https address, and anything else gets a message an editor can act on;
 - share links built from the page's own metadata, with no third-party scripts, counts or cookies, so nothing reaches
@@ -62,6 +62,8 @@ writes, for each profile in the order below:
 | Threads | `social.social_threads` | threads.com, threads.net, www.; or the username | `https://www.threads.com/@yourname` |
 | Bluesky | `social.social_bluesky` | bsky.app/profile/…; or the handle (`yourname.bsky.social`, or a domain) | `https://bsky.app/profile/yourname.bsky.social` |
 | Mastodon | `social.social_mastodon` | any server's `/@yourname`; or `@yourname@server` | `https://server/@yourname` |
+| Vimeo | `social.social_vimeo` | vimeo.com, www.; a user or `channels/…`; or the username | `https://vimeo.com/yourname` |
+| Behance | `social.social_behance` | behance.net, www.; or the username | `https://www.behance.net/yourname` |
 
 The first five keys are the ones the CMS's Social Media Links plugin used, so a site's existing settings read as they
 are. That plugin stored Instagram, X (as Twitter) and Pinterest as usernames, sometimes with the `@` its hint

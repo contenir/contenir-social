@@ -1,6 +1,6 @@
 {
     "name": "contenir/social",
-    "description": "Framework-free social profiles and share links for Contenir: a network catalogue, profile URL checks for ten networks, share links with no third-party scripts, inline SVG icons and a small script for Copy link and Share.",
+    "description": "Framework-free social profiles and share links for Contenir: a network catalogue, profile URL checks for twelve networks, share links with no third-party scripts, inline SVG icons and a small script for Copy link and Share.",
     "type": "library",
     "license": "BSD-3-Clause",
     "keywords": [
