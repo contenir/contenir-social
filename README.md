@@ -18,7 +18,7 @@ It has no framework dependency. Sites use it through an adapter, and the CMS thr
 - **Laminas MVC sites:** [contenir/social-laminas-mvc](https://github.com/contenir/contenir-social-laminas-mvc) adds
   `socialProfiles()` and `share()` view helpers.
 - **The CMS:** the [Social add-on](https://github.com/contenir-extension/social) (`contenir-extension/social`) holds
-  the settings, checks each profile as it is saved and turns stored handles into addresses.
+  the settings, and checks each profile, as an address or just the account, as it is saved.
 
 ## Requirements
 
@@ -67,8 +67,9 @@ writes, for each profile in the order below:
 
 The first five keys are the ones the CMS's Social Media Links plugin used, so a site's existing settings read as they
 are. That plugin stored Instagram, X (as Twitter) and Pinterest as usernames, sometimes with the `@` its hint
-suggested; they read as addresses. LinkedIn needs the whole address, since a name alone could be a company or a
-person. A value that isn't a profile is left out, and `Profiles::$problems` says why, by key.
+suggested. Values are read as they are stored, an address in any form or just the account, and the full address is
+built when a page is written, so stored values never need rewriting and templates that read them directly keep
+working. LinkedIn needs the whole address, since a name alone could be a company or a person. A value that isn't a profile is left out, and `Profiles::$problems` says why, by key.
 
 `ProfileUrl::parse()` reads one value (and throws), `tryParse()` returns null instead, and `problem()` returns the
 message for an editor.
